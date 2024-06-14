@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <before>false</before>
+        <description/>
+        <name>Update LNR s from global</name>
+        <record_for_rollback>true</record_for_rollback>
+        <script><![CDATA[gs.invalidateCache();
+var loanerRecs = new
+GlideRecord('x_cdltd_loaner_req_loaner_request');
+loanerRecs.addQuery('state','!=',3);
+loanerRecs.setLimit(3);
+loanerRecs.query();
+
+while(loanerRecs.next()){
+          loanerRecs.setValue('state',3);
+          loanerRecs.update();
+}]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-13 10:07:28</sys_created_on>
+        <sys_id>ed1c0e0dc57602107f44373fa65082ee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Update LNR s from global</sys_name>
+        <sys_package display_value="Loaner Request" source="x_cdltd_loaner_req">4db85878d8b202107f4446f194cf0322</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">4db85878d8b202107f4446f194cf0322</sys_scope>
+        <sys_update_name>sys_script_fix_ed1c0e0dc57602107f44373fa65082ee</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-13 10:07:28</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

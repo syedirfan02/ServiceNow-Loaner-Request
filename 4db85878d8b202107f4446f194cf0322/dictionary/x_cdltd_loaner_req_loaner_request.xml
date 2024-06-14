@@ -1,3 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="bfef38f4d87602107f4446f194cf0334" extends="task" label="Loaner Request" max_length="40" name="x_cdltd_loaner_req_loaner_request" type="collection"/>
+    <element db_object_id="bfef38f4d87602107f4446f194cf0334" extends="task" label="Loaner Request" max_length="40" name="x_cdltd_loaner_req_loaner_request" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="3" default="santa clara" label="Depot" max_length="40" name="depot" type="string">
+            <choice>
+                <element inactive_on_update="false" label="New York" sequence="0" value="new york"/>
+                <element inactive_on_update="false" label="London" sequence="1" value="london"/>
+                <element inactive_on_update="false" label="Buenos Aires" sequence="2" value="buenos aires"/>
+                <element inactive_on_update="false" label="Santa Clara" sequence="3" value="santa clara"/>
+                <element inactive_on_update="false" label="Singapore" sequence="4" value="singapore"/>
+                <element inactive_on_update="false" label="Sydney" sequence="5" value="sydney"/>
+                <element inactive_on_update="false" label="Other" sequence="6" value="other"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="End date" mandatory="true" max_length="40" name="end_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="laptop" label="Item type" max_length="40" name="item_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Laptop" sequence="0" value="laptop"/>
+                <element inactive_on_update="false" label="Mobile Phone" sequence="1" value="mobile phone"/>
+                <element inactive_on_update="false" label="Projector" sequence="2" value="projector"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Overdue reminder" max_length="40" name="last_overdue_reminder" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" label="Location to be used" max_length="40" name="location_data" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Location to be used" max_length="40" name="location_to_be_used" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Other" max_length="40" name="other" type="string"/>
+        <element label="Overdue count" max_length="40" name="overdue_count" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Pick up reminder" max_length="40" name="pick_up_reminder" type="glide_date_time"/>
+        <element attributes="encode_utf8=false" label="Requested for" mandatory="true" max_length="32" name="requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Return reminder" max_length="40" name="return_reminder" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" label="Start date" mandatory="true" max_length="40" name="start_date" type="glide_date"/>
+    </element>
 </database>

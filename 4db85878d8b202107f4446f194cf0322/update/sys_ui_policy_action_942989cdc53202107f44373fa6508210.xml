@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>other</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-13 05:14:34</sys_created_on>
+        <sys_id>942989cdc53202107f44373fa6508210</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>other</sys_name>
+        <sys_package display_value="Loaner Request" source="x_cdltd_loaner_req">4db85878d8b202107f4446f194cf0322</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loaner Request">4db85878d8b202107f4446f194cf0322</sys_scope>
+        <sys_update_name>sys_ui_policy_action_942989cdc53202107f44373fa6508210</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-13 05:14:34</sys_updated_on>
+        <table>x_cdltd_loaner_req_loaner_request</table>
+        <ui_policy display_value="Other">3e9801cdc53202107f44373fa6508295</ui_policy>
+        <visible>true</visible>
+    </sys_ui_policy_action>
+</record_update>
